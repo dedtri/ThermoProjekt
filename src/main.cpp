@@ -35,8 +35,8 @@ unsigned long startTime;
 unsigned long sleepDuration = 4 * 60 * 1000; // 4 minutes in milliseconds
 
 // Replace with your network credentials
-const char* ssid     = "E308";
-const char* password = "98806829";
+const char* ssid     = "WNet";
+const char* password = "591GL5ENA1L";
 
 // Define CS pin for the SD card module
 #define SD_CS 5
@@ -227,8 +227,6 @@ void getReadings(){
     Serial.print("Temperature: ");
     Serial.println(temperatureC);
     lastTemperatureSent = temperatureC;
-
-    // temperatureC = sensors.getTempCByIndex(0);
 
     // Send temperature data to all connected WebSocket clients
     String temperatureString = String(temperatureC);
