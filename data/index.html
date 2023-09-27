@@ -71,7 +71,7 @@ var chartT = new Highcharts.Chart({
     }
   });
 
-  var socket = new WebSocket("ws://192.168.8.126/ws");
+  var socket = new WebSocket("ws://192.168.0.49/ws");
 
   socket.onopen = function(event) {
     // WebSocket connection opened
@@ -96,9 +96,8 @@ var chartT = new Highcharts.Chart({
     console.log('Connection closed');
   };
 
-
   document.getElementById("downloadButton").addEventListener("click", function() {
-  fetch("http://192.168.8.126/downloadCSV", { // Replace with your Arduino's endpoint URL
+  fetch("http://192.168.0.49/downloadCSV", { // Replace with your Arduino's endpoint URL
     method: "GET",
   })
   .then(response => response.blob())
@@ -117,7 +116,7 @@ var chartT = new Highcharts.Chart({
 });
 
 document.getElementById("clearButton").addEventListener("click", function() {
-  fetch("http://192.168.8.126/clearCSV", { // Replace with your Arduino's endpoint URL for clearing CSV
+  fetch("http://192.168.0.49/clearCSV", { // Replace with your Arduino's endpoint URL for clearing CSV
     method: "GET",
   })
   .then(response => {
