@@ -35,8 +35,8 @@ unsigned long startTime;
 unsigned long sleepDelay = 5 * 60 * 1000; // 5 minutes in milliseconds
 
 // Replace with your network credentials
-const char *ssid = "SSID HIDDEN";
-const char *password = "WIFI PASSWORD HIDDEN";
+const char *ssid = "Spiderman";
+const char *password = "@C4mpD3tS3jl3r!";
 
 // Define CS pin for the SD card module
 #define SD_CS 5
@@ -178,9 +178,6 @@ void setup() {
   // Start the DallasTemperature library
   sensors.begin();
 
-  // Increment readingID on every new reading
-  readingID++;
-
   initWebSocket();
 
   // Configure web server routes
@@ -265,6 +262,8 @@ void loop() {
     getReadings();
     getTimeStamp();
     logSDCard();
+    // Increment readingID on every new reading
+    readingID++;
   }
 }
 
