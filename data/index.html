@@ -81,7 +81,10 @@ var chartT = new Highcharts.Chart({
 
   socket.onmessage = function(event) {
     // Handle received temperature data here
-    var x = (new Date()).getTime();
+    var x = (new Date()).getTime(); // Get the current timestamp
+    var hoursToAdd = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+    x += hoursToAdd; // Add 2 hours to the timestamp
+    console.log(x);
     var y = parseFloat(event.data);
 
     if (chartT.series[0].data.length > 40) {

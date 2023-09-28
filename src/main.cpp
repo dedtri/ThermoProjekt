@@ -35,8 +35,8 @@ unsigned long startTime;
 unsigned long sleepDelay = 5 * 60 * 1000; // 5 minutes in milliseconds
 
 // Replace with your network credentials
-const char *ssid = "Spiderman";
-const char *password = "@C4mpD3tS3jl3r!";
+const char *ssid = "HIDDEN SSID";
+const char *password = "HIDDEN PASSWORD";
 
 // Define CS pin for the SD card module
 #define SD_CS 5
@@ -214,7 +214,7 @@ void setup() {
 }
 
 unsigned long lastExecutionTime = 0; // Initialize a variable to track the last execution time
-const unsigned long delayInterval = 60000; // 1 minute in milliseconds
+const unsigned long delayInterval = 30000; // ½ minute in milliseconds
 
 /**
  * @brief Button ISR (Interrupt Service Routine).
